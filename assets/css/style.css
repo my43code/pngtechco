@@ -254,18 +254,7 @@ body {
     color: #742a2a;
 }
 
-/* Footer */
-.site-footer {
-    padding: 1.5rem 0;
-    border-top: 1px solid #eee;
-    background: #fafafa;
-}
 
-.footer-inner {
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--muted);
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -298,4 +287,93 @@ body {
     .site-header {
         position: sticky;
     }
+}
+
+.site-footer {
+    background: #01ff2b;
+    color: var(--light);
+    margin-top: 3rem;
+    padding: 2.5rem 1rem 1.5rem;
+    text-align: left;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 1.2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.footer-grid h3 {
+    color: var(--secondary);
+    margin-bottom: 0.6rem;
+}
+
+.footer-links,
+.footer-grid ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+}
+
+.footer-map {
+    display: flex;              /* enables flexbox */
+    flex-direction: column;     /* stacks children vertically */
+    gap: 0.4rem;                /* spacing between children */
+    margin-left: 0cm;          /* move block left by ~2cm */
+    /* alternatively: transform: translateX(-2cm); */
+    margin-right: 1cm; 
+}
+
+
+.map-embed {
+    width: 100%;
+    min-height: 260px;
+    aspect-ratio: 4 / 3;
+    border: 0;
+    border-radius: 0.9rem;
+    box-shadow: 0 12px 24px rgba(255, 1, 1, 0.25);
+    filter: saturate(1.05);
+}
+
+.social-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(4, 135, 145, 0.4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    width: 100%;
+}
+
+.footer-bottom {
+    text-align: left;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+.footer-bottom p {
+    text-align: center;
 }
