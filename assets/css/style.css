@@ -377,3 +377,213 @@ body {
 .footer-bottom p {
     text-align: center;
 }
+
+/* GENERAL PAGE STYLING */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background: #f8f9fb;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #d90429;
+}
+
+/* HEADER */
+.site-header {
+    background: #13ff27;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 45px;
+    width: 45px;
+    border-radius: 40%;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d90429;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    color: #ffffff;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+}
+
+/* PAGE HERO */
+.page-hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('../img/techbg.jpg') center/cover;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.page-hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* FOUNDER BOX */
+.founder-section {
+    background: #fff;
+}
+
+.founder-box {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.founder-photo img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #d90429;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.founder-content {
+    flex: 1;
+}
+
+.founder-content p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* QUOTE BOX */
+.quote {
+    background: #f1f1f1;
+    padding: 15px;
+    border-left: 5px solid #d90429;
+    font-style: italic;
+    border-radius: 8px;
+}
+
+/* TWO COLUMN (Skills + Services) */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background: #fff;
+    margin-bottom: 12px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #d90429;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-list li i {
+    color: #d90429;
+    font-size: 18px;
+}
+
+/* MISSION BOX */
+.mission-box {
+    background: #fff3f3;
+    border-top: 3px solid #d90429;
+    text-align: center;
+}
+
+.mission-box p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+.site-footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.site-footer i {
+    color: #d90429;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .founder-photo img {
+        margin-bottom: 20px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+}
+
