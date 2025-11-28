@@ -3,8 +3,8 @@
     --primary-dark: #800000;
     --accent: #f2a900;
     --bg: #f7f7f7;
-    --text: #222;
-    --muted: #666;
+    --text: #000000;
+    --muted: #000000;
     --radius: 12px;
 }
 
@@ -58,7 +58,7 @@ body {
 
 /* Header / Nav */
 .site-header {
-    background: #fff;
+    background: green;
     border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
@@ -84,6 +84,7 @@ body {
 .logo img {
     height: 40px;
     width: auto;
+    border-radius: 40%;
 }
 
 .main-nav ul {
