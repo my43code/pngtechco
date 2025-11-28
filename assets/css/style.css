@@ -364,6 +364,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .newsletter-form input {
