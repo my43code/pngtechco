@@ -346,12 +346,14 @@ body {
     border-radius: 0.9rem;
     box-shadow: 0 12px 24px rgba(255, 1, 1, 0.25);
     filter: saturate(1.05);
+    align-content: center;
 }
 
 .social-links {
     display: flex;
     gap: 0.5rem;
     margin-top: 0.5rem;
+    align-content: center;
 }
 
 .social-links a {
@@ -369,7 +371,7 @@ body {
 }
 
 .footer-bottom {
-    text-align: left;
+    text-align: center;
     margin-top: 2rem;
     font-size: 0.85rem;
 }
