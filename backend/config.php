@@ -1,7 +1,7 @@
 <?php
-$host = "127.0.0.1";  // Hostinger database host
+$host = "127.0.0.1:3306";  // Hostinger database host
 $db_name = "u600623649_pngtechco_db";       // your actual DB name
-$db_user = "u600623649_pngtechco_admi";       // your DB username (same prefix)
+$db_user = "u600623649_pngtechco_admin";       // your DB username (same prefix)
 $db_pass = "wcc@2025MM";            // the password you created
 
 $conn = new mysqli($host, $db_user, $db_pass, $db_name);
