@@ -1,8 +1,9 @@
 <?php
-$host = "srv2088.hstgr.io";  // Hostinger database host
-$db_name = "u600623649_pngtechco_db";       // your actual DB name
-$db_user = "u600623649_pngtechco_admi";       // your DB username (same prefix)
-$db_pass = "wcc@2025MM";            // the password you created
+
+$host = "srv2088.hstgr.io"; 
+$db_name = "u600623649_pngtechco_db"; 
+$db_user = "u600623649_admin";
+$db_pass = "wcc@2025MM";
 
 $conn = new mysqli($host, $db_user, $db_pass, $db_name);
 
