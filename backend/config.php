@@ -1,7 +1,7 @@
 <?php
 
 $host = "srv2088.hstgr.io"; 
-$db_name = "u600623649_pngtechco"; 
+$db_name = "u600623649_pngtechco_db"; 
 $db_user = "u600623649_admin";
 $db_pass = "wcc@2025MM";
 
