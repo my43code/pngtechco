@@ -11,12 +11,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Basic validation
     if ($name === "" || $email === "" || $service === "" || $message === "") {
-        header("Location: ../contact.php?status=error");
+        header("Location: ../contact.html?status=error");
         exit();
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../contact.php?status=error");
+        header("Location: ../contact.html?status=error");
         exit();
     }
 
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     );
 
     if (!$stmt) {
-        header("Location: ../contact.php?status=error");
+        header("Location: ../contact.html?status=error");
         exit();
     }
 
@@ -36,32 +36,34 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($stmt->execute()) {
 
         // ------------------------------------------------
-        //  EMAIL NOTIFICATION TO YOU (PNGTECHCO)
+        //  EMAIL NOTIFICATION TO PNGTECHCO
         // ------------------------------------------------
 
-        $to = "manu.maso@pngtechco.com";   // ✔ Your email address
-        $subject = "New Contact Form Message from PNGTECHCO Website";
+        $to = "manu.maso@pngtechco.com";   // Your actual email
+        $subject = "New Contact Form Message - PNGTECHCO";
 
-        $email_body  = "You have received a new message from your website:\n\n";
+        $email_body  = "You have received a new message:\n\n";
         $email_body .= "Name: $name\n";
         $email_body .= "Email: $email\n";
         $email_body .= "Phone: $phone\n";
-        $email_body .= "Service: $service\n";
+        $email_body .= "Service: $service\n\n";
         $email_body .= "Message:\n$message\n\n";
-        $email_body .= "This email was sent from your website contact form.";
+        $email_body .= "Sent from PNGTECHCO Website.";
 
-        // Important for Hostinger email sending
+        // You MUST create this email inside Hostinger Emails
         $headers  = "From: no-reply@pngtechco.com\r\n";
         $headers .= "Reply-To: $email\r\n";
+        $headers .= "X-Mailer: PHP/" . phpversion();
 
-        // Send email
+        // Send the email
         mail($to, $subject, $email_body, $headers);
 
         // Redirect success
-        header("Location: ../contact.php?status=success");
+        header("Location: ../contact.html?status=success");
+        exit();
     } else {
-        // Redirect error
-        header("Location: ../contact.php?status=error");
+        header("Location: ../contact.html?status=error");
+        exit();
     }
 
     $stmt->close();
