@@ -360,11 +360,10 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: 1px solid rgba(4, 135, 145, 0.4);
+    border: 1px solid rgba(0, 112, 37, 0.4);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
 .newsletter-form input {
