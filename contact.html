@@ -40,7 +40,12 @@
             <div>
                 <h2>Send us a message</h2>
 
-              
+                <!-- SUCCESS / ERROR MESSAGES --
+                <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
+                    <div class="alert success">Thank you, your message has been sent.</div>
+                <?php elseif (isset($_GET['status']) && $_GET['status'] === 'error'): ?>
+                    <div class="alert error">Sorry, something went wrong. Please try again.</div>
+                <?php endif; ?>-->
 
                 <form class="contact-form" action="backend/contact_process.php" method="POST">
                     <label for="name">Full Name*</label>
@@ -74,21 +79,58 @@
             <div>
                 <h2>Contact Details</h2>
                 <p><strong>PNGTechCo</strong></p>
-                <p>Gerehu Stage 6, NCD, Port Moresby</p>
+                <p>Gerehu Stage 6, NCD, NCD, Port Moresby</p>
                 <p>WhatsApp: <strong>78337326</strong></p>
                 <p>Email: <strong>masomanu23@gmail.com</strong></p>
-                <p>We support clients nationwide.</p>
+                <p>We are based in Port Moresby and can also support clients in other provinces online.</p>
             </div>
         </div>
     </section>
 </main>
 
-<footer class="site-footer">
-    <div class="footer-grid">
-        <!-- Footer content unchanged -->
-    </div>
-</footer>
+ <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Find Us</h3>
+                <p></p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/g/1KCUh8WdS6/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCST6gzxMCCitWLwJFh7Znrg" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="footer-map">
+                    
+                    <br>
+                 
+                </div>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>PNG TechCo</li>
+                        <li>Gerehu Stage 6</li>
+                    <li>NCD, Port Moresby </li>
+                    <li>Phone: 78337326 </li>
+                    <li>Email: <a href="mailto:masomanu23@gmail.com">masomanu23@gmail.com</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Useful Links</h3>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Telikom PNG</a></li>
+                    <li><a href="contact.html">Digicel PNG</a></li>
+                    <li><a href="contact.html">Vodafone PNG</a></li>
+                    <li><a href="contact.html">Air Lines PNG</a></li>
+                    <li><a href="contact.html">Air Niugini PNG</a></li>
+                   
 
-<script src="js/script.js"></script>
+                </ul>
+            </div>
+            
+        </div>
+      
+    <script src="js/script.js"></script>
 </body>
-</html>
+</html

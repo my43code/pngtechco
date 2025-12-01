@@ -72,3 +72,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "Invalid request method.";
 }
 ?>
+
+ <!-- SUCCESS / ERROR MESSAGES --
+                <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
+                    <div class="alert success">Thank you, your message has been sent.</div>
+                <?php elseif (isset($_GET['status']) && $_GET['status'] === 'error'): ?>
+                    <div class="alert error">Sorry, something went wrong. Please try again.</div>
+                <?php endif; ?>-->
